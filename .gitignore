@@ -1,0 +1,31 @@
+# Qt build output
+build/
+*.pro.user
+*.user
+*.autosave
+
+# CMake
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+
+# Qt Creator
+*.creator.user
+*.qmlproject.user
+
+# Compiled files
+*.o
+*.obj
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Database files (don't commit test data)
+*.db
+*.sqlite
+
+# OS files
+.DS_Store
+Thumbs.db
