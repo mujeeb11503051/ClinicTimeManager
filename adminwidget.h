@@ -18,6 +18,13 @@ public:
 private:
     Ui::AdminWidget *ui;
 
+    enum AdminPages {
+        PageDirectory  = 0,
+        PageProfile    = 1,
+        PageAttendance = 2,
+        PageLeave      = 3
+    };
+
 signals:
     void logoutRequested();
 
