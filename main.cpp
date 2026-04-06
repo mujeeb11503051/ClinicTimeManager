@@ -25,6 +25,7 @@ int main(int argc, char *argv[])
     DatabaseManager::instance().addTestEmployee();
 
     MainWindow w;
-    w.show();
+    //w.show();
+    w.showMaximized();
     return a.exec();
 }
