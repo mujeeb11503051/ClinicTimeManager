@@ -56,7 +56,7 @@
     </layout>
    </item>
    <item>
-    <widget class="QListView" name="listView"/>
+    <widget class="QListView" name="employeeListView"/>
    </item>
   </layout>
  </widget>

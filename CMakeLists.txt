@@ -35,6 +35,8 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         profilewidget.h profilewidget.cpp profilewidget.ui
         attendancewidget.h attendancewidget.cpp attendancewidget.ui
         leavewidget.h leavewidget.cpp leavewidget.ui
+        addemployeedialog.h addemployeedialog.cpp addemployeedialog.ui
+
     )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET TimeManagementApplication APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR

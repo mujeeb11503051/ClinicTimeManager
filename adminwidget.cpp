@@ -28,6 +28,12 @@ AdminWidget::AdminWidget(QWidget *parent)
     connect(m_directory, &DirectoryWidget::logoutRequested,
             this, &AdminWidget::logoutRequested);
 
+    connect(m_directory, &DirectoryWidget::employeeSelected,
+            this, [this](int empId, const QString &name) {
+                // We will pass data to profile page here later
+                ui->adminStackedWidget->setCurrentIndex(PageProfile);
+            });
+
 }
 
 AdminWidget::~AdminWidget()
