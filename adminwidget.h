@@ -21,6 +21,8 @@ private:
 signals:
     void logoutRequested();
 
+private slots:
+    void on_btnLogout_clicked();
 };
 
 #endif // ADMINWIDGET_H

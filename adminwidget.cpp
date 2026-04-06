@@ -7,11 +7,15 @@ AdminWidget::AdminWidget(QWidget *parent)
 {
     ui->setupUi(this);
 
-    connect(ui->btnLogout, &QPushButton::clicked,
-            this, &AdminWidget::logoutRequested);
 }
 
 AdminWidget::~AdminWidget()
 {
     delete ui;
 }
+
+void AdminWidget::on_btnLogout_clicked()
+{
+    emit logoutRequested();
+}
+

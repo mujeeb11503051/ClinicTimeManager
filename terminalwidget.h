@@ -22,6 +22,8 @@ private:
 signals:
     void goToAdminRequested();
 
+private slots:
+    void on_btnGoToAdmin_clicked();
 };
 
 #endif // TERMINALWIDGET_H
