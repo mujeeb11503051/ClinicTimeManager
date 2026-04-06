@@ -6,6 +6,9 @@ TerminalWidget::TerminalWidget(QWidget *parent)
     , ui(new Ui::TerminalWidget)
 {
     ui->setupUi(this);
+
+    connect(ui->btnGoToAdmin, &QPushButton::clicked,
+            this, &TerminalWidget::goToAdminRequested);
 }
 
 TerminalWidget::~TerminalWidget()

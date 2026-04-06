@@ -22,6 +22,14 @@ MainWindow::MainWindow(QWidget *parent)
 
     // Start on terminal page
     ui->stackedWidget->setCurrentIndex(TerminalPage);
+
+    connect(m_terminal, &TerminalWidget::goToAdminRequested, this, [this]() {
+        ui->stackedWidget->setCurrentIndex(AdminPage);
+    });
+
+    connect(m_admin, &AdminWidget::logoutRequested, this, [this]() {
+        ui->stackedWidget->setCurrentIndex(TerminalPage);
+    });
 }
 
 MainWindow::~MainWindow()

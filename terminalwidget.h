@@ -17,6 +17,11 @@ public:
 
 private:
     Ui::TerminalWidget *ui;
+
+
+signals:
+    void goToAdminRequested();
+
 };
 
 #endif // TERMINALWIDGET_H

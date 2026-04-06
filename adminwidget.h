@@ -17,6 +17,10 @@ public:
 
 private:
     Ui::AdminWidget *ui;
+
+signals:
+    void logoutRequested();
+
 };
 
 #endif // ADMINWIDGET_H

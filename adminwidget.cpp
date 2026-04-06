@@ -6,6 +6,9 @@ AdminWidget::AdminWidget(QWidget *parent)
     , ui(new Ui::AdminWidget)
 {
     ui->setupUi(this);
+
+    connect(ui->btnLogout, &QPushButton::clicked,
+            this, &AdminWidget::logoutRequested);
 }
 
 AdminWidget::~AdminWidget()
