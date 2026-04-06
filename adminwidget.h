@@ -2,6 +2,10 @@
 #define ADMINWIDGET_H
 
 #include <QWidget>
+#include "directorywidget.h"
+#include "profilewidget.h"
+#include "attendancewidget.h"
+#include "leavewidget.h"
 
 namespace Ui {
 class AdminWidget;
@@ -24,6 +28,11 @@ private:
         PageAttendance = 2,
         PageLeave      = 3
     };
+
+    DirectoryWidget  *m_directory;
+    ProfileWidget    *m_profile;
+    AttendanceWidget *m_attendance;
+    LeaveWidget      *m_leave;
 
 signals:
     void logoutRequested();

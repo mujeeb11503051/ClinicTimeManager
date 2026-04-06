@@ -20,14 +20,14 @@
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
-    <widget class="QStackedWidget" name="AdminStackedWidget">
+    <widget class="QStackedWidget" name="adminStackedWidget">
      <property name="font">
       <font>
        <pointsize>23</pointsize>
       </font>
      </property>
      <property name="currentIndex">
-      <number>1</number>
+      <number>0</number>
      </property>
      <widget class="QWidget" name="Directory">
       <layout class="QVBoxLayout" name="verticalLayout_5">

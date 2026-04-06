@@ -30,6 +30,11 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         databasemanager.h databasemanager.cpp
         terminalwidget.h terminalwidget.cpp terminalwidget.ui
         adminwidget.h adminwidget.cpp adminwidget.ui
+        employeedelegate.h employeedelegate.cpp
+        directorywidget.h directorywidget.cpp directorywidget.ui
+        profilewidget.h profilewidget.cpp profilewidget.ui
+        attendancewidget.h attendancewidget.cpp attendancewidget.ui
+        leavewidget.h leavewidget.cpp leavewidget.ui
     )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET TimeManagementApplication APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR
