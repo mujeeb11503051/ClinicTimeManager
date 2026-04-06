@@ -2,6 +2,8 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include "terminalwidget.h"
+#include "adminwidget.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -19,5 +21,15 @@ public:
 
 private:
     Ui::MainWindow *ui;
+
+    TerminalWidget *m_terminal;
+    AdminWidget    *m_admin;
+
+    // Add the enum:
+    enum Pages {
+        TerminalPage = 0,
+        AdminPage    = 1
+    };
+
 };
 #endif // MAINWINDOW_H

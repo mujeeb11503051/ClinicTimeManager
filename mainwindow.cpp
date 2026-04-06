@@ -6,6 +6,22 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+
+    // Create the widgets
+    m_terminal = new TerminalWidget(this);
+    m_admin    = new AdminWidget(this);
+
+    // Replace the dummy pages with real widgets
+    ui->stackedWidget->insertWidget(TerminalPage, m_terminal);
+    ui->stackedWidget->insertWidget(AdminPage,    m_admin);
+
+    // Remove the original dummy pages Qt Designer created
+    // (index shifts after insert, so remove index 2 twice)
+    ui->stackedWidget->removeWidget(ui->stackedWidget->widget(2));
+    ui->stackedWidget->removeWidget(ui->stackedWidget->widget(2));
+
+    // Start on terminal page
+    ui->stackedWidget->setCurrentIndex(TerminalPage);
 }
 
 MainWindow::~MainWindow()
