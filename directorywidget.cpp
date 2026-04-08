@@ -65,11 +65,12 @@ void DirectoryWidget::on_employeeListView_clicked(const QModelIndex &index)
 {
     if (!index.isValid()) return;
 
-    int empId     = m_directoryModel->data(
-                                    m_directoryModel->index(index.row(), 0)).toInt();
-    QString name  = m_directoryModel->data(
-                                       m_directoryModel->index(index.row(), 1)).toString();
+    int empId          = m_directoryModel->data(m_directoryModel->index(index.row(), 0)).toInt();
+    QString name       = m_directoryModel->data(m_directoryModel->index(index.row(), 1)).toString();
+    QString dob        = m_directoryModel->data(m_directoryModel->index(index.row(), 2)).toString();
+    QString personalNum = m_directoryModel->data(m_directoryModel->index(index.row(), 3)).toString();
+    int vacationDays   = m_directoryModel->data(m_directoryModel->index(index.row(), 4)).toInt();
 
-    emit employeeSelected(empId, name);
+    emit employeeSelected(empId, name, dob, personalNum, vacationDays);
 }
 

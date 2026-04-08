@@ -28,12 +28,27 @@ AdminWidget::AdminWidget(QWidget *parent)
     connect(m_directory, &DirectoryWidget::logoutRequested,
             this, &AdminWidget::logoutRequested);
 
+    // When employee card is clicked, load their data into profile page
     connect(m_directory, &DirectoryWidget::employeeSelected,
-            this, [this](int empId, const QString &name) {
-                // We will pass data to profile page here later
+            this, [this](int empId, const QString &name,
+                   const QString &dob, const QString &personalNumber,
+                   int vacationDays) {
+                m_profile->loadEmployee(empId, name, dob, personalNumber, vacationDays);
                 ui->adminStackedWidget->setCurrentIndex(PageProfile);
             });
 
+    // Profile navigation signals
+    connect(m_profile, &ProfileWidget::backRequested, this, [this]() {
+        ui->adminStackedWidget->setCurrentIndex(PageDirectory);
+    });
+
+    connect(m_profile, &ProfileWidget::attendanceRequested, this, [this]() {
+        ui->adminStackedWidget->setCurrentIndex(PageAttendance);
+    });
+
+    connect(m_profile, &ProfileWidget::leaveRequested, this, [this]() {
+        ui->adminStackedWidget->setCurrentIndex(PageLeave);
+    });
 }
 
 AdminWidget::~AdminWidget()

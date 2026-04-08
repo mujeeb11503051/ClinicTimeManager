@@ -24,7 +24,9 @@ private:
 
 signals:
     void logoutRequested();
-    void employeeSelected(int employeeId, const QString &name);
+    void employeeSelected(int empId, const QString &name,
+                          const QString &dob, const QString &personalNumber,
+                          int vacationDays);
 
 private slots:
     void on_btnLogout_clicked();
