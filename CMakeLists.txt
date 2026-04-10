@@ -36,6 +36,8 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         attendancewidget.h attendancewidget.cpp attendancewidget.ui
         leavewidget.h leavewidget.cpp leavewidget.ui
         addemployeedialog.h addemployeedialog.cpp addemployeedialog.ui
+        confirmationdialog.h confirmationdialog.cpp confirmationdialog.ui
+
 
     )
 # Define target properties for Android with Qt 6 as:
