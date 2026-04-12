@@ -2,6 +2,7 @@
 #define TERMINALWIDGET_H
 
 #include <QWidget>
+#include <QTimer>
 
 namespace Ui {
 class TerminalWidget;
@@ -18,12 +19,20 @@ public:
 private:
     Ui::TerminalWidget *ui;
 
+    enum Pages {
+        pageTerminal = 0,
+        pageAction    = 1
+    };
+
+    QTimer *m_clockTimer;
+
 
 signals:
     void goToAdminRequested();
 
 private slots:
     void on_btnGoToAdmin_clicked();
+    void updateDateTime();
 };
 
 #endif // TERMINALWIDGET_H
