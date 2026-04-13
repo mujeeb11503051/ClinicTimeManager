@@ -20,11 +20,14 @@ private:
     Ui::TerminalWidget *ui;
 
     enum Pages {
-        pageTerminal = 0,
-        pageAction    = 1
+        PageInput = 0,
+        PageAction     = 1
     };
 
     QTimer *m_clockTimer;
+
+    int     m_currentEmpId;
+    QString m_currentEmpName;
 
 
 signals:
@@ -33,6 +36,8 @@ signals:
 private slots:
     void on_btnGoToAdmin_clicked();
     void updateDateTime();
+    void on_btnVerify_clicked();
+    void on_btnBack_clicked();
 };
 
 #endif // TERMINALWIDGET_H
