@@ -80,6 +80,7 @@ void TerminalWidget::on_btnVerify_clicked()
 
     // Switch to action page
     ui->editEmpId->clear();
+    ui->lblWelcome->setText("Hi, " + m_currentEmpName + "!");
     ui->stackedWidget->setCurrentIndex(PageAction);
 }
 
