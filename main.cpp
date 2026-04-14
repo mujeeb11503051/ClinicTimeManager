@@ -7,7 +7,10 @@
 
 int main(int argc, char *argv[])
 {
+    qputenv("QT_QPA_PLATFORM", "windows:darkmode=0");
     QApplication a(argc, argv);
+
+    QApplication::setStyle("Fusion");
 
     QTranslator translator;
     const QStringList uiLanguages = QLocale::system().uiLanguages();
